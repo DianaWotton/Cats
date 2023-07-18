@@ -1,0 +1,100 @@
+body {margin:0;}
+
+.content {
+    display: block;
+    width: 800px;
+    margin: 0 auto 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0 auto;
+}
+
+nav {
+  display: block;
+  width: 800px;
+  margin: 0 auto 10px;
+}
+
+.menu ul {
+  display: -webkit-flex;
+  display: flex;
+  padding-left: 0;
+}
+
+.menu a {
+  padding: 1em;
+  display: block;
+  color: #3f3f3f;
+  border-right: 1px solid #bdbebd;
+  height: 20px
+}
+
+.post {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.post:hover {
+    background: #ebebeb;
+}
+
+.post_info {
+  display: inline-block;
+  position: relative;
+  bottom:0;
+  height: 200px;
+  width: 300px;
+}
+
+.post_text {
+    padding: 5px;
+    position:absolute;
+    bottom:3;
+    height: 195px;
+    width: 455px;
+    font-size: 14pt;
+}
+
+.info {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#pagination {
+	display: flex;
+	padding: 0;
+	list-style-type: none;
+	margin-bottom: 50px;
+}
+
+#pagination li {
+	margin-right: 5px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+#pagination li:hover, #pagination li.active {
+	cursor: pointer;
+	color: green;
+	border: 1px solid green;
+}
+
+#find_in {
+    background-color: white;
+    height: 25px;
+    background-image: url('img/searchicon.png');
+    background-position: 3px 2px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+}
+
+select {
+height: 25px;
+}
+
+input[type=button] {
+    height: 25px;
+}

@@ -1,0 +1,29 @@
+version: '2.1'
+services:
+  postgres:
+    restart: always
+    image: postgres:10
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: sber
+    ports:
+      - 5432:5432
+
+  sber:
+    build: .
+    container_name: sber
+    restart: on-failure
+    volumes:
+    - .:/sber
+    environment:
+      - USER_DB=postgres
+      - PASSWORD_DB=root
+      - FLASK_SECRET=super_secret_key
+      - ADM_LOGIN=root
+      - ADM_PASSWORD=root
+    ports:
+      - 3000:3000
+    depends_on:
+      - postgres
